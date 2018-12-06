@@ -23,7 +23,7 @@ jobs:
   - bash: echo "##vso[task.prependpath]/usr/share/miniconda/bin"
     displayName: Add conda to PATH
 
-  - bash: conda create --yes --quiet --name myEnvironment python=$PYTHON_VERSION # [other packages ...]
+  - bash: conda create --yes --quiet --name myEnvironment python=3.6 # [other packages ...]
     displayName: Create Anaconda environment
 
   - script: python -m pip install --upgrade pip && pip install -r requirements.txt
