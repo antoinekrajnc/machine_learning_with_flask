@@ -31,9 +31,8 @@ def predict():
             "predicted.html",
             prediction = float(prediction)
             ))
-        except ValueError:
-            print(ValueError)
-            return jsonify("Please enter a number.")
+        except ValueError as erreur:
+            return jsonify("{}".format(erreur))
         return response
 
 
