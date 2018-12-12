@@ -2,7 +2,6 @@ from flask import Flask, render_template, redirect, url_for, request, make_respo
 from sklearn.externals import joblib
 import requests
 import json
-import os
 
 app = Flask(__name__)
 
