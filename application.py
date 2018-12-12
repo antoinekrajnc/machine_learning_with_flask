@@ -32,6 +32,7 @@ def predict():
             prediction = float(prediction)
             ))
         except ValueError:
+            print(ValueError)
             return jsonify("Please enter a number.")
         return response
 
