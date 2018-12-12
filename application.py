@@ -5,8 +5,8 @@ import json
 
 app = Flask(__name__)
 
-dark_sky_api_key = os.environ.get("APPSETTING_DARK_SKY_API_KEY")
-ipstack_api_key = os.environ.get("APPSETTING_IPSTACK_API_KEY")
+dark_sky_api_key = os.environ.get("DARK_SKY_API_KEY")
+ipstack_api_key = os.environ.get("IPSTACK_API_KEY")
 
 @app.route("/")
 def index():
