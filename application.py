@@ -25,7 +25,7 @@ def predict():
         try:
             regressor = joblib.load("./linear_regression_model.pkl")
             data = dict(request.form.items())
-            years_of_experience = float(data["YearsExperience"])
+            years_of_experience = [[float(data["YearsExperience"])]]
             prediction = regressor.predict(years_of_experience)
             response = make_response(render_template(
             "predicted.html",
